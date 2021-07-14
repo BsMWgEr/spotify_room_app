@@ -42,7 +42,7 @@ class JoinRoom(APIView):
             if len(room_result) > 0:
                 room = room_result[0]
                 self.request.session['room_code'] = code
-                return Resoponse({'message': 'Room Join!'}, status=status.HTTP_200_OK)
+                return Response({'message': 'Room Join!'}, status=status.HTTP_200_OK)
 
 class CreateRoomView(APIView):
     serializer_class = CreateRoomSerializer
